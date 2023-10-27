@@ -1,6 +1,6 @@
 self.__uv$config = {
   prefix: "/uv/service/",
-  bare: "https://dd-neon-chi.vercel.app/bare/",
+  bare: "https://cxfdfdfd.ddnsking.com/bare/",
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
   handler: "/uv/uv.handler.js",
