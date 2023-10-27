@@ -1,1 +1,33 @@
-<p>Hello World</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SKYE UV</title>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/index.js"></script>
+    <script src="/assets/js/cloakcheck.js"></script>
+    <script>
+        function redirectToUrl() {
+            var urlInput = document.getElementById("url-input").value;
+            var encodedUrl = encodeURIComponent(urlInput);
+            
+            if (urlInput.includes("http")) {
+                location.href = __uv$config.prefix + __uv$config.encodeUrl(encodedUrl);
+            } else {
+                var searchQuery = encodeURIComponent("https://www.google.com/search?q=" + urlInput);
+                location.href = __uv$config.prefix + __uv$config.encodeUrl(searchQuery);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>SKYE UV</h1>
+    <form onsubmit="event.preventDefault(); redirectToUrl();">
+        <label for="url-input">Enter URL:</label>
+        <input type="text" id="url-input" name="url-input">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
